@@ -1,0 +1,216 @@
+.time-line {
+  color: $timeLine_color;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  position: relative;
+  overflow: hidden;
+  color: $black;
+  z-index: 0;
+
+  .item {
+    position: relative;
+    text-align: center;
+
+    + .item {
+      margin-top: $timeLine-item_gutterHeight;
+    }
+
+    &.-major {
+      background-color: $timeLine-item-_major_bgColor;
+      padding-bottom: $timeLine-item_paddingVertical;
+      padding-top: $timeLine-item_paddingVertical;
+      margin-top: $timeLine-item_gutterHeight;
+      min-height: $timeLine-item_minHeight;
+
+      .wrapper {
+        margin-top: -$timeLine-item_gutterHeight;
+      }
+    }
+
+    &.-minor {
+      .icon {
+        height: $timeLine-icon-_minor_size;
+        width: $timeLine-icon-_minor_size;
+
+        > * {
+          line-height: $timeLine-icon-_minor_size;
+        }
+      }
+
+      .title {
+        margin-top: $timeLine-title-_minor_marginTop;
+        font-size: $timeLine-title-_minor_fontSize;
+      }
+    }
+  }
+
+  .wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $timeLine-wrapper_maxWidth;
+    padding-left: $padding-base-horizontal;
+    padding-right: $padding-base-horizontal;
+    position: relative;
+    z-index: 1;
+  }
+
+  .date {
+    display: block;
+    text-align: center;
+    font-size: $timeLine-date_fontSize;
+    margin-bottom: $timeLine-date_marginBottom;
+  }
+
+  .icon {
+    height: $timeLine-icon_size;
+    width: $timeLine-icon_size;
+    color: $body-bg;
+    border-radius: $timeLine-icon_size;
+    display: inline-block;
+    position: relative;
+
+    > * {
+      line-height: $timeLine-icon_size;
+    }
+  }
+
+  .title {
+    font-size: $timeLine-title_fontSize;
+    margin-top: $timeLine-title_marginTop;
+    margin-bottom: $timeLine-title_marginBottom;
+  }
+
+  .img-medium,
+  .img-major {
+    height: auto;
+    left: 50%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    @include transform(translate(-50%, -50%));
+  }
+
+  .img-full {
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .divider {
+    width: $timeLine-line_width;
+    background-color: $timeLine-line_bgColor;
+    @include transform(translateX(-50%));
+    height: $timeLine-item_gutterHeight;
+    margin: $timeLine-item_paddingVertical auto;
+  }
+}
+
+
+.timeline-wrapper {
+  @include clearfix;
+  position: relative;
+}
+
+.timeline-nav {
+  right: $timeline-nav-right;
+  position: absolute;
+  z-index: 1;
+  line-height: $timeline-nav-lineheight;
+  &affix-top {
+    top: 0;
+  }
+  &.affix-bottom {
+    bottom: 0;
+  }
+  &.affix {
+    position: fixed;
+    top: -60px;
+  }
+}
+
+.timeline-nav-list {
+  margin-top: $timeline-nav-list-mvertical;
+  margin-bottom: $timeline-nav-list-mvertical;
+  min-width: $timeline-nav-list-minwidth;
+  > li.active {
+    > a {
+      font-weight: bold;
+      padding: 10px 15px;
+
+      &,
+      #{$selector-focus} {
+        color: $timeline-nav-anchor-active-color;
+        text-decoration: none;
+      }
+
+      &:before {
+        position: absolute;
+        content: '\f0da';
+        left: -10px;
+        font-family: 'fontAwesome';
+      }
+    }
+  }
+}
+
+.timeline-nav-anchor {
+  &:hover {
+    color: $timeline-nav-anchor-active-color;
+    text-decoration: none;
+  }
+
+  &,
+  #{$selector-focus} {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+.item {
+  .timeline-item-anchor {
+    padding: 1px;
+    position: absolute;
+    margin-top: -150px;
+  }
+  &.-minor {
+    .timeline-item-anchor {
+      margin-top: -100px;
+    }
+  }
+}
+
+.button-bot-timeline {
+  .divider-button-bot-timeline {
+    position: relative;
+    width: $divider-button-bot-width;
+    background-color: $divider-button-bot-width-background-color;
+    @include transform(translateX(-50%));
+    height: $divider-button-bot-height;
+    margin: $divider-button-bot-margin;
+  }
+  .scroll-to-top {
+    position: absolute;
+    text-align: $scroll-top-text-align;
+    left: $scroll-top-left;
+    @include transform(translateX(-50%));
+
+    a {
+      position: relative;
+      text-align: $scroll-top-a-text-align;
+      left: $scroll-top-a-left;
+      @include transform(translateX(-50%));
+      color: $scroll-top-a-color;
+      display: block;
+      width: $scroll-top-a-width;
+      height: $scroll-top-a-height;
+      line-height: $scroll-top-a-line-height;
+      background: $scroll-top-a-background;
+      outline: $scroll-top-a-outline;
+      border-radius: $scroll-top-a-radius;
+      margin-bottom: $scroll-top-a-mb;
+
+      &:hover {
+        background: $scroll-top-hover-background;
+      }
+    }
+  }
+}

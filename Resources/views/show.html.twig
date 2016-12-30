@@ -15,7 +15,7 @@
         </nav>
         <ol class="time-line">
             {% for item in events %}
-                {% include 'QuovadisFrontTemplateBundle:Gui/prototype/fromScratch/modules:_timelineItem.html.twig' with {
+                {% include '@VictoireWidgetTimeline/partial/_timelineItem.html.twig' with {
                     'data': {
                         'uid': widget.id,
                         'image': item.image,
