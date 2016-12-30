@@ -1,0 +1,15 @@
+services:
+    victoire_core.widget_timeline_content_resolver:
+        class: Victoire\Widget\TimelineBundle\Resolver\WidgetTimelineContentResolver
+        tags:
+            - { name: victoire_widget.widget_content_resolver, alias: Timeline }
+
+    #alias to the entity
+    victoire.widget.timeline:
+        class: Victoire\Widget\TimelineBundle\Entity\WidgetTimeline
+
+    #alias to the form
+    victoire.widget.form.timeline:
+        class: Victoire\Widget\TimelineBundle\Form\WidgetTimelineType
+        tags:
+            - { name: form.type , alias: victoire_widget_form_timeline }

@@ -1,0 +1,8 @@
+<div class="arrow -quoted"></div>
+
+{% include 'QuovadisFrontTemplateBundle:Bricks:_panel.html.twig' with {
+    'panel_class': '-shadowed -quoted',
+    'panel_heading_content': '<blockquote class="block-quote">«' ~ quote|trans ~ '»</blockquote>',
+    'panel_avatar': asset(avatar),
+    'panel_body_content': '<span class="h6 text-center font-semibold">' ~ user_name ~ user_age ~ user_city ~ '</span>'
+} %}

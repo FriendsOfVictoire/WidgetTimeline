@@ -1,0 +1,7 @@
+<div class="arrow"></div>
+
+{% include 'QuovadisFrontTemplateBundle:Bricks:_panel.html.twig' with {
+    'panel_class': '-shadowed -partner',
+    'panel_heading_content': '<div class="text-center"><a href="' ~ href ~ '"><img src="' ~ logo | imagine_filter('panel_partner_logo') ~ '"></a></div>',
+    'panel_body_content': '<span class="h6 text-center font-semibold">' ~ heading|trans~'</span><blockquote class="block-quote">«' ~ quote ~ '»</blockquote>'
+} %}

@@ -1,0 +1,6 @@
+<div class="arrow"></div>
+
+{% include 'QuovadisFrontTemplateBundle:Bricks:_panel.html.twig' with {
+    'panel_class': '-shadowed -comment',
+    'panel_body_content': '<span class="h5 text-center font-bold">' ~ title|trans ~ '</span><div class="text-center"><a href="' ~ href ~ '"><img class="avatar-img" src="' ~ user.avatar.path|default(asset('bundles/quovadisfronttemplate/images/default-avatar.png'))|imagine_filter('avatar') ~ '"></a></div>' ~ ((user is defined and user) ? '<span class="h6 text-center font-semibold">' ~ user.firstName|capitalize ~ " " ~ user.lastname|capitalize ~ ((user.age or user.addressCity) ? ', ' : '') ~ (user.age ? (user.age ~ ' ans' ~ (user.addressCity ? ', ' : '')) : '') ~ user.addressCity | capitalize ~ '</span>': '' )
+} %}

@@ -1,0 +1,6 @@
+<div class="arrow"></div>
+
+{% include 'QuovadisFrontTemplateBundle:Bricks:_panel.html.twig' with {
+    'panel_class': '-shadowed -badged',
+    'panel_body_content': '<span class="h6 text-center font-semibold">' ~ heading|trans ~ '</span><div class="text-center"><img src="' ~ badge ~ '"></div>'
+} %}

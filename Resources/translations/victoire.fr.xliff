@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2013-11-27T18:15:06Z" source-language="en" target-language="fr" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit resname="widget.timeline.new.action.label">
+        <source>widget.timeline.new.action.label</source>
+        <target>Chronologie</target>
+      </trans-unit>
+      <trans-unit resname="modal.form.widget.type.timeline.label">
+        <source>modal.form.widget.type.timeline.label</source>
+        <target>Chronologie</target>
+      </trans-unit>
+      <trans-unit resname="widget_timeline_event.form.title.label">
+        <source>widget_timeline_event.form.title.label</source>
+        <target>Titre</target>
+      </trans-unit>
+      <trans-unit resname="widget_timeline_event.form.description.label">
+        <source>widget_timeline_event.form.description.label</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit resname="widget_timeline_event.form.image.label">
+        <source>widget_timeline_event.form.image.label</source>
+        <target>Image</target>
+      </trans-unit>
+      <trans-unit resname="form.widget_timeline_event.date.label">
+        <source>form.widget_timeline_event.date.label</source>
+        <target>Date</target>
+      </trans-unit>
+      <trans-unit resname="form.widget_timeline_event.linkLabel.label">
+        <source>form.widget_timeline_event.linkLabel.label</source>
+        <target>Libellé du bouton</target>
+      </trans-unit>
+      <trans-unit resname="victoire_widget.timeline.buttonLabel.default_value">
+        <source>victoire_widget.timeline.buttonLabel.default_value</source>
+        <target>En savoir plus</target>
+      </trans-unit>
+      <trans-unit resname="form.widget_timeline_event.importance.label">
+        <source>form.widget_timeline_event.importance.label</source>
+        <target>Importance</target>
+      </trans-unit>
+      <trans-unit resname="form.widget_timeline_event.importance.choices.minor">
+        <source>form.widget_timeline_event.importance.choices.minor</source>
+        <target>Mineur</target>
+      </trans-unit>
+      <trans-unit resname="form.widget_timeline_event.importance.choices.medium">
+        <source>form.widget_timeline_event.importance.choices.medium</source>
+        <target>Moyen</target>
+      </trans-unit>
+      <trans-unit resname="form.widget_timeline_event.importance.choices.major">
+        <source>form.widget_timeline_event.importance.choices.major</source>
+        <target>Majeur</target>
+      </trans-unit>
+      <trans-unit resname="form.widget_timeline_event.iconFull.label">
+        <source>form.widget_timeline_event.iconFull.label</source>
+        <target>Image à 100% dans la pastille</target>
+      </trans-unit>
+      <trans-unit resname="form.widget_timeline_event.button.to.up">
+        <source>form.widget_timeline_event.button.to.up</source>
+        <target>REVENIR EN HAUT</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

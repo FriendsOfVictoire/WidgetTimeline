@@ -1,0 +1,22 @@
+{
+    "name": "friendsofvictoire/timeline-widget",
+    "type": "symfony-bundle",
+    "description": "Victoire Timeline widget",
+    "keywords": [
+        "victoire",
+        "Timeline",
+        "widget"
+    ],
+    "homepage": "http://victoire.io",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.5.9",
+        "symfony/framework-bundle": "~2.8|~3.0",
+        "victoire/victoire": ">=2.0.0"
+    },
+    "autoload": {
+        "psr-0": { "Victoire\\Widget\\TimelineBundle": "" }
+    },
+    "minimum-stability": "dev",
+    "target-dir": "Victoire/Widget/TimelineBundle"
+}

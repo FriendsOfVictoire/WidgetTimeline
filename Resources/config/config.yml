@@ -1,0 +1,11 @@
+victoire_core:
+    widgets:
+        Timeline:
+            class: "Victoire\\Widget\\TimelineBundle\\Entity\\WidgetTimeline"
+            name: Timeline
+            
+jms_translation:
+    configs:
+        victoire_timeline_bundle:
+            dirs: ["@VictoireTimelineBundle"]
+            output_dir: "@VictoireTimelineBundle/Resources/translations"
