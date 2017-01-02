@@ -1,0 +1,56 @@
+<li class="item -{{ data.importance|default('medium') }}">
+    <a href="#" id="timeline-item-anchor-{{ data.uid }}-{{ data.year }}" class="timeline-item-anchor"></a>
+    <div class="wrapper">
+        <time class="date {{ data.dateExtraClass|default('') }}"><strong>{{ data.year }}</strong></time>
+
+        {% if data.image is defined and data.image != "" or data.icon is defined and data.icon != "" %}
+            <i class="icon bg-primary">
+                {% if data.image is defined and data.image != '' %}
+                    {% if data.importance == 'major' %}
+                        {% set img_filter = 'timeline_item_icon' %}
+                    {% else %}
+                        {% set img_filter = 'timeline_item_icon' %}
+                    {% endif %}
+
+                    {% set img_srcset = '' %}
+                    {% for densitiy in ['2x', '1x'] %}
+                        {% if not loop.first %}
+                            {% set img_srcset = img_srcset ~ ', ' %}
+                        {% endif %}
+                        {% set img_srcset = img_srcset ~ data.image|imagine_filter(img_filter ~ '_' ~ densitiy) ~ ' ' ~ densitiy %}
+                    {% endfor %}
+
+                    {% set img_class = "img-" ~ data.importance|default('medium') %}
+                    {% if data.iconFull %}
+                        {% set img_class = img_class ~ ' img-full' %}
+                    {% else %}
+                        {% set style = 'max-height: 50px; max-width: 50px' %}
+                    {% endif %}
+                    <img class="{{ img_class }} " src="{{ data.image|imagine_filter('timeline_item_icon_1x') }}" srcset="{{ img_srcset }}" height="50" style="{{ style|default('') }}">
+                {% endif %}
+
+                {% if data.icon is defined and data.icon != '' %}
+                    <i class="fa fa-{{ data.icon }} fa-{{ data.iconSize|default(2) }}x"></i>
+                {% endif %}
+            </i>
+        {% endif %}
+
+        {% if data.title is defined and data.title != '' %}
+            <h3 class="title">{{ data.title|raw }}</h3>
+        {% endif %}
+
+        {% if data.description is defined and data.description != '' %}
+            <p class="description">
+                {{ data.description|raw }}
+            </p>
+        {% endif %}
+
+        {% if data.link is defined and data.link != '' %}
+            <div class="text-center">
+                <a href="{{ data.link }}" class="btn btn-default btn-sm" target="{{ data.linkTarget|default('_parent') }}">
+                    {{ data.linkLabel|default('victoire_widget.timeline.buttonLabel.default_value')|trans({}, 'victoire') }}
+                </a>
+            </div>
+        {% endif %}
+    </div>
+</li>

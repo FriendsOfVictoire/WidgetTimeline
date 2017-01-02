@@ -24,3 +24,16 @@ Do not forget to add the bundle in your AppKernel !
         }
     }
 ```
+
+This bundle require LiipImagineBundle with the following configuration
+
+```yml
+liip_imagine:
+    filter_sets:
+        timeline_item_icon_1x:
+            filters:
+                thumbnail: {size: [100, 100], mode: inset}
+        timeline_item_icon_2x:
+            filters:
+                thumbnail: {size: [200, 200], mode: inset}
+```
