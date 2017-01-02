@@ -17,7 +17,7 @@ class WidgetTimeline extends Widget
      * @var string
      *
      * @ORM\OneToMany(targetEntity="WidgetTimelineEvent", mappedBy="timeline", cascade={"persist", "remove"}, orphanRemoval=true)
-     * @ORM\OrderBy({"date" = "ASC"})
+     * @ORM\OrderBy({"startDate" = "ASC"})
      */
     protected $events;
 

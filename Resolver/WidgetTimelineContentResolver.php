@@ -21,7 +21,7 @@ class WidgetTimelineContentResolver extends BaseWidgetContentResolver
         $parameters['years'] = [];
         /** @var WidgetTimelineEvent $_item */
         foreach ($parameters['events'] as $_item) {
-            $parameters['years'][$_item->getDate()->format('Y')] = $_item->getDate()->format('Y');
+            $parameters['years'][$_item->getStartDate()->format('Y')] = $_item->getStartDate()->format('Y');
         }
 
         return $parameters;
