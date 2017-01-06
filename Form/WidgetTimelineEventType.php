@@ -41,7 +41,12 @@ class WidgetTimelineEventType extends WidgetListingItemType
                 'label' => 'form.widget_timeline_event.linkLabel.label',
                 'required' => false,
             ))
-            ->add('date', null, array(
+            ->add('startDate', null, array(
+                'label' => 'form.widget_timeline_event.date.label',
+                'widget' => 'single_text',
+                'vic_datepicker' => true,
+            ))
+            ->add('endDate', null, array(
                 'label' => 'form.widget_timeline_event.date.label',
                 'widget' => 'single_text',
                 'vic_datepicker' => true,
