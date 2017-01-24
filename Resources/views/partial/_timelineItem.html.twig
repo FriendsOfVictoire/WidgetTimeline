@@ -1,7 +1,15 @@
 <li class="item -{{ data.importance|default('medium') }}">
-    <a href="#" id="timeline-item-anchor-{{ data.uid }}-{{ data.year }}" class="timeline-item-anchor"></a>
+    <a href="#" id="timeline-item-anchor-{{ data.uid }}-{{ data.startDate }}" class="timeline-item-anchor"></a>
     <div class="wrapper">
-        <time class="date {{ data.dateExtraClass|default('') }}"><strong>{{ data.year }}</strong></time>
+        <time class="date {{ data.dateExtraClass|default('') }}">
+            <strong>
+                {% if data.endDate|default(false) %}
+                    {{ data.startDate~" - "~data.endDate }}
+                {% else %}
+                    {{ data.startDate }}
+                {% endif %}
+            </strong>
+        </time>
 
         {% if data.image is defined and data.image != "" or data.icon is defined and data.icon != "" %}
             <i class="icon bg-primary">
