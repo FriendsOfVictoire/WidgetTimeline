@@ -1,8 +1,0 @@
-{% if (goal > 0) %}
-<div class="arrow"></div>
-
-{% include 'QuovadisFrontTemplateBundle:Bricks:_panel.html.twig' with {
-'panel_class': '-shadowed -progressed',
-'panel_body_content': '<span class="h6 text-center font-semibold">' ~ heading|trans ~ '</span><div class="funding-dial"><input type="text" value="' ~ (recolted * 100 / goal) | round ~ '" data-width="100" data-thickness=".2" data-fgColor="#66B0CB" data-readOnly="true"></div><span class="h6 text-center font-semibold">' ~ recolted ~ ' / ' ~ goal ~ '</span>',
-} %}
-{% endif %}
